@@ -58,13 +58,13 @@ npm run dev
 
 ---
 
-## ???? Preview
+## Preview
 
 A peek at the quiz in action:
 
 > https://gdg-quiz-subodh584s-projects.vercel.app/
 
 
-## ???? Contribution
+## Contribution
 
 This project was created as a part of the GDG SRM initiative by Subodh Chauhan . Contributions are open to all! Fork and enrich it with:
