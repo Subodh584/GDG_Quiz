@@ -1,0 +1,89 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .option-button {
+    @apply relative w-full px-6 py-4 text-left rounded-lg border-2 transition-all duration-200
+    hover:bg-quiz-accent/20 hover:border-quiz-accent;
+  }
+  
+  .option-button.selected {
+    @apply border-quiz-primary bg-quiz-accent/20;
+  }
+  
+  .option-button.correct {
+    @apply border-quiz-correct bg-quiz-correct/20;
+  }
+  
+  .option-button.incorrect {
+    @apply border-quiz-incorrect bg-quiz-incorrect/20;
+  }
+  
+  .quiz-card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100;
+    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.1), 0 8px 10px -6px rgba(99, 102, 241, 0.1);
+  }
+  
+  .progress-bar {
+    @apply h-2 rounded-full overflow-hidden bg-gray-200;
+  }
+  
+  .progress-bar-fill {
+    @apply h-full bg-quiz-primary transition-all duration-300 ease-out;
+  }
+  
+  .quiz-container {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f0 100%);
+    min-height: 100vh;
+  }
+}
